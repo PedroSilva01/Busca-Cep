@@ -20,9 +20,6 @@ function App() {
       const response = await api.get(`${input}/json`);
       setCep(response.data)
       setInput('') 
-      if(response.data.logradouro == ''){
-        cep.logradouro = "não há logradouro registrado"
-      }
     }catch{
       alert('Ops.. erro ao buscar')
       setInput('') //volta o  valor do useState pra vazio
